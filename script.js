@@ -1,48 +1,63 @@
+// toggle dark and light modes
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById("themeToggle");
+
+  function setTheme(isDark) {
+    document.body.classList.toggle("dark", isDark);
+    toggleBtn.textContent = isDark ? "☀️" : "🌙";
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  }
+
+  window.toggleTheme = function () {
+    const isDark = !document.body.classList.contains("dark");
+    setTheme(isDark);
+  };
+
+  // Load saved theme
+  const savedTheme = localStorage.getItem("theme") === "dark";
+  setTheme(savedTheme);
+});
+
+// the card button clicks
 let activeModal = null;
 
 function openModal(id) {
-activeModal = document.getElementById(id);
-activeModal.classList.add("active");
-document.body.style.overflow = "hidden";
+  const modal = document.getElementById(id);
+  const body = modal.querySelector(".modal-body");
+
+  activeModal = modal;
+  modal.classList.add("active");
+  document.body.style.overflow = "hidden";
+
+  body.classList.add("loading");
+  setTimeout(() => {
+    body.classList.remove("loading");
+  }, 400);
 }
 
 function closeModal(id) {
-const modal = document.getElementById(id);
-modal.classList.remove("active");
-document.body.style.overflow = "auto";
-activeModal = null;
+  const modal = document.getElementById(id);
+  modal.classList.remove("active");
+  document.body.style.overflow = "auto";
+  activeModal = null;
 }
 
-// ESC key support
+// ESC key
 document.addEventListener("keydown", (e) => {
-if (e.key === "Escape" && activeModal) {
+  if (e.key === "Escape" && activeModal) {
     activeModal.classList.remove("active");
     document.body.style.overflow = "auto";
     activeModal = null;
-}
+  }
 });
 
-// Click outside modal content to close
+// Click outside
 document.querySelectorAll(".modal").forEach(modal => {
-modal.addEventListener("click", (e) => {
+  modal.addEventListener("click", (e) => {
     if (e.target === modal) {
-    modal.classList.remove("active");
-    document.body.style.overflow = "auto";
-    activeModal = null;
+      modal.classList.remove("active");
+      document.body.style.overflow = "auto";
+      activeModal = null;
     }
+  });
 });
-});
-
-function openModal(id) {
-const modal = document.getElementById(id);
-const body = modal.querySelector(".modal-body");
-
-modal.classList.add("active");
-document.body.style.overflow = "hidden";
-
-body.classList.add("loading");
-
-setTimeout(() => {
-    body.classList.remove("loading");
-}, 400); // subtle, fast
-}
