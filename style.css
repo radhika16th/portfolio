@@ -62,7 +62,10 @@ body {
 
 .nav-name {
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.15rem;        /* slightly bigger */
+  letter-spacing: 0.02em;   /* soft, elegant spacing */
+  cursor: default;
+  transition: color 0.25s ease;
 }
 
 .nav-links a {
@@ -70,10 +73,20 @@ body {
   text-decoration: none;
   color: var(--text);
   font-size: 0.95rem;
+  position: relative;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
+/* Light mode hover */
 .nav-links a:hover {
-  text-decoration: underline;
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+/* Dark mode hover */
+body.dark .nav-links a:hover {
+  background-color: rgba(237, 218, 218, 0.365);
 }
 
 /* HERO */
