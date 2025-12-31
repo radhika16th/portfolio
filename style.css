@@ -83,5 +83,56 @@ body {
   background: #FFFFFF;
   padding: 2rem;
   border-radius: 8px;
+  text-decoration: none;
+  color: #0F0F0F;
+  transition: transform 0.2s ease;
+}
+
+/* MODAL BACKGROUND */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 15, 15, 0.6);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MODAL CONTENT */
+.modal-content {
+  background: #FFFFFF;
+  max-width: 600px;
+  width: 90%;
+  padding: 2.5rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* CLOSE BUTTON */
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-content ul {
+  margin: 1.2rem 0;
+  padding-left: 1.2rem;
+}
+
+.modal-content li {
+  margin-bottom: 0.4rem;
+}
+
+.modal-content a {
+  text-decoration: none;
   font-weight: 500;
+  color: #0F0F0F;
+}
+
+.modal-content a:hover {
+  text-decoration: underline;
 }
