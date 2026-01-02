@@ -29,23 +29,30 @@
 
   <!-- HERO -->
   <section class="hero">
-    <h1>Raadhikka Gupta</h1>
-    <p>Software Engineering Student</p>
-    <p class="hero-sub"> Currently exploring full-stack development, systems, and thoughtful UI. </p>
+    <div class="hero-inner">
+        <h1>Raadhikka Gupta</h1>
+        <p>Software Engineering Student</p>
+        <p class="hero-sub">
+        I’m specializing in full-stack development, systems, and applied AI.
+        Currently, I’m studying at McMaster University and building projects through coursework and personal exploration, with a focus on real-world problem-solving.
+        </p>
+    </div>
+
     <div class="scroll-indicator" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })">
         <span>scroll</span>
         <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 16l-6-6h12z" />
+        <path d="M12 16l-6-6h12z" />
         </svg>
     </div>
   </section>
+
 
   <!-- ABOUT -->
   <section class="section" id="about">
     <h2>About</h2>
     <p>
-      I’m a software engineering student interested in building clean,
-      thoughtful, and impactful technology.
+      I’m Raadhikka Gupta, a Software Engineering student at McMaster University with a strong interest in software development, data systems, and applied problem-solving. I have experience building full-stack applications and working with Python, Java, C/C++, Flask, SQL, and web technologies through academic projects, internships, and nonprofit collaborations. <br>
+      I enjoy turning complex technical ideas into practical, real-world solutions and have worked on projects involving data scraping, automation, systems design, and web platforms. Alongside technical work, I’m actively involved in mentorship, tutoring, and STEM outreach, and I care deeply about building inclusive and accessible technology.
     </p>
   </section>
 
@@ -62,6 +69,26 @@
         <div class="card" onclick="openModal('project2')">
         <h3>Robotics Locomotion System</h3>
         <p>Simulation & control</p>
+        </div>
+
+        <div class="card" onclick="openModal('project3')">
+        <h3>Hooked</h3>
+        <p>Web Application</p>
+        </div>
+
+        <div class="card" onclick="openModal('project4')">
+        <h3>Object Counter</h3>
+        <p>Computer Vision Application</p>
+        </div>
+
+        <div class="card" onclick="openModal('project5')">
+        <h3>Exercise Chatbot</h3>
+        <p>AI Chatbot</p>
+        </div>
+
+        <div class="card" onclick="openModal('project6')">
+        <h3>Wordsearch</h3>
+        <p>Console-based Game</p>
         </div>
     </div>
   </section>
@@ -81,12 +108,11 @@
     <div class="modal-content">
         <span class="close" onclick="closeModal('project1')">&times;</span>
         <div class="modal-body loading">
-            <h2>Grant Management Portal</h2>
-            <p class="project-meta">University / Work Project</p>
-
+            <h2>Youreka Grant Management Portal</h2>
+            <p class="project-meta">Work Project</p>
+            <br>
             <p>
-            Built a full-stack platform for managing grant opportunities,
-            filtering by region, and tracking applications.
+            Built a centralized grant management web platform to help nonprofits track, filter, and manage funding opportunities across Canada. Developed the application using Flask and SQLAlchemy, enabling structured grant data storage and efficient retrieval, and implemented advanced filtering by province, eligibility, funding type, and deadlines to improve grant discoverability. Added full bilingual (English/French) support to ensure nationwide accessibility, and designed the backend with scalability and maintainability in mind through clean data models and modular architecture.
             </p>
 
             <ul>
@@ -95,8 +121,11 @@
             <li><strong>Context:</strong> Non-profit collaboration</li>
             </ul>
 
-            <a href="https://github.com/yourusername/project" target="_blank">
+            <a href="https://github.com/sajeenthshivauthayalingam-sketch/canada-grants-portal" target="_blank">
             View Project →
+            </a> <br>
+            <a href="https://canada-grants-portal.onrender.com/" target="_blank">
+            View Website →
             </a>
         </div>
     </div>
@@ -108,19 +137,115 @@
         <span class="close" onclick="closeModal('project2')">&times;</span>
         <div class="modal-body loading">
             <h2>Robotics Locomotion System</h2>
-            <p class="project-meta">Research / Coursework</p>
+            <p class="project-meta">University Club</p> <br>
 
             <p>
-            Designed and implemented a locomotion pipeline for a quadruped robot,
-            including simulation and real-time joint control.
+            Worked on the software and simulation stack for a humanoid/legged robotics project, focusing on system architecture, physics-based simulation, and control experimentation. Used the Genesis Physics Engine to set up and debug legged robot simulations, configure environments, and define observation and action spaces for learning-based control and locomotion experiments. Assisted with simulation debugging, experiment setup, and version control workflows while collaborating with a multidisciplinary team across mechanical, electrical, and software domains.
             </p>
 
             <ul>
             <li><strong>Languages:</strong> C++, Python</li>
-            <li><strong>Tools:</strong> ROS2, Gazebo, Genesis</li>
+            <li><strong>Tools:</strong>Genesis, Zephyr, Reinforcement Learning</li>
             </ul>
 
-            <a href="#">Private / In progress</a>
+            <!-- <a href="#">In progress</a> -->
+            <p><b>In progress</b></p>
+        </div>
+    </div>
+  </div>
+
+  <!-- PROJECT 3 -->
+  <div class="modal" id="project3">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('project3')">&times;</span>
+        <div class="modal-body loading">
+            <h2>Hooked</h2>
+            <p class="project-meta">Hackathon Project</p> <br>
+
+            <p>
+                Hooked is a web application that lets users share their reading preferences and discover books they’ll love. Users can select favorite genres, list their top 3 favorite books, and browse recommendations tailored to their tastes.
+            </p>
+
+            <ul>
+            <li><strong>Languages:</strong> Python, HTML, CSS, JavaScript</li>
+            <li><strong>Tools:</strong> Flask, SQLAlchemy, Jinja</li>
+            </ul>
+
+            <a href="https://github.com/radhika16th/Ignition-Hacks" target="_blank">
+            View Project →
+            </a> <br>
+        </div>
+    </div>
+  </div>
+
+  <!-- PROJECT 4 -->
+  <div class="modal" id="project4">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('project4')">&times;</span>
+        <div class="modal-body loading">
+            <h2>Object Counter</h2>
+            <p class="project-meta">Co-op Project</p> <br>
+
+            <p>
+                Object Counter is a computer vision application that detects and counts objects in real time using video input. Built with Python and OpenCV, this application utilizes image processing techniques and contour detection to efficiently track objects, with potential applications in automation, surveillance, and data analysis.
+            </p>
+
+            <ul>
+            <li><strong>Languages:</strong> Python </li>
+            <li><strong>Tools:</strong> PyTorch, OpenCV, Yolov8, VidGear</li>
+            </ul>
+
+            <a href="https://github.com/radhika16th/videoObjectCounting" target="_blank">
+            View Project →
+            </a> <br>
+        </div>
+    </div>
+  </div>
+
+  <!-- PROJECT 5 -->
+  <div class="modal" id="project5">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('project5')">&times;</span>
+        <div class="modal-body loading">
+            <h2>Exercise Chatbot</h2>
+            <p class="project-meta">Co-op Project</p> <br>
+
+            <p>
+                Exercise Chatbot is an application that provides safe, conversational exercise suggestions based on user-reported pain or symptoms. It utilizes large language models (HuggingFace) with safety prompts and disclaimers to ensure guidance and was developed using Python and Flask for local testing and experimentation.    
+            </p>
+
+            <ul>
+            <li><strong>Languages:</strong> Python, HTML, CSS </li>
+            <li><strong>Tools:</strong> Flask, HuggingFace, NLP, Prompt Engineering, ML, JSON</li>
+            </ul>
+
+            <a href="https://github.com/radhika16th/chatbot-exercise" target="_blank">
+            View Project →
+            </a> <br>
+        </div>
+    </div>
+  </div>
+
+   <!-- PROJECT 6 -->
+  <div class="modal" id="project6">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('project6')">&times;</span>
+        <div class="modal-body loading">
+            <h2>Wordsearch</h2>
+            <p class="project-meta">Coursework</p> <br>
+
+            <p>
+                A command-line tool that reads a word-search puzzle grid and a list of words, finds the words in the grid, and outputs a colour-marked solved puzzle. Reads a puzzle grid from a file or from standard input. It reads words to search for from standard input, marks all occurrences of found words, prints the solved, coloured puzzle, and has a --help flag explaining usage
+            </p>
+
+            <ul>
+            <li><strong>Languages:</strong> C </li>
+            <li><strong>Tools:</strong> Makefile </li>
+            </ul>
+
+            <a href="https://github.com/radhika16th/wordsearch" target="_blank">
+            View Project →
+            </a> <br>
         </div>
     </div>
   </div>

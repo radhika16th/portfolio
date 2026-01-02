@@ -125,7 +125,8 @@ body.dark .resume-link:hover {
   justify-content: center;
   padding: 4rem;
   background-color: var(--bg);
-  /* position: relative; */
+  margin-left: 20rem;
+  margin-top: -5rem;
 }
 
 .hero h1 {
@@ -188,6 +189,7 @@ body.dark .resume-link:hover {
 .section {
   padding: 4rem;
   max-width: 900px;
+  margin: 0 auto;
 }
 
 .section h2 {
