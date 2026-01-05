@@ -76,6 +76,7 @@ tabs.forEach(tab => {
   });
 });
 
+// Moblie navbar
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 
