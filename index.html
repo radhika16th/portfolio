@@ -195,7 +195,7 @@
         <div class="modal-body loading project-layout"> 
 
             <div class="project-media">
-                <img src="./assets/images/grant_portal.png" alt="Youreka Grant Portal dashboard" class="project-image"/>
+                <img src="./assets/images/grant_portal.png" alt="Youreka Grant Portal dashboard" class="project-image" onclick="openLightbox(this)"/>
             </div>
 
             <div class="project-text">
@@ -270,7 +270,7 @@
         <span class="close" onclick="closeModal('project3')">&times;</span>
         <div class="modal-body loading project-layout">
             <div class="project-media">
-                <img src="./assets/images/hooked.png" alt="Youreka Grant Portal dashboard" class="project-image"/>
+                <img src="./assets/images/hooked.png" alt="Youreka Grant Portal dashboard" class="project-image" onclick="openLightbox(this)"/>
             </div>
 
             <div class="project-text">
@@ -310,7 +310,7 @@
         <span class="close" onclick="closeModal('project4')">&times;</span>
         <div class="modal-body loading project-layout">
             <div class="project-media">
-                <img src="./assets/images/object_counter.png" alt="Youreka Grant Portal dashboard" class="project-image"/>
+                <img src="./assets/images/object_counter.png" alt="Youreka Grant Portal dashboard" class="project-image" onclick="openLightbox(this)"/>
             </div>
 
             <div class="project-text">
@@ -350,7 +350,7 @@
         <span class="close" onclick="closeModal('project5')">&times;</span>
         <div class="modal-body loading project-layout">
             <div class="project-media">
-                <img src="./assets/images/exercise_chatbot.png" alt="Youreka Grant Portal dashboard" class="project-image"/>
+                <img src="./assets/images/exercise_chatbot.png" alt="Youreka Grant Portal dashboard" class="project-image" onclick="openLightbox(this)"/>
             </div>
 
             <div class="project-text">
@@ -449,6 +449,10 @@
     <div class="side-line"></div>
   </div>
 
+  <!-- Image Lightbox -->
+  <div class="image-lightbox" id="imageLightbox" onclick="closeLightbox()">
+    <img id="lightboxImage" alt="Expanded project preview" />
+  </div>
 
   <script src="script.js"></script>
 </body>

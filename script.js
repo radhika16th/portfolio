@@ -89,3 +89,16 @@ document.querySelectorAll(".nav-links a").forEach(link => {
     navLinks.classList.remove("active");
   });
 });
+
+// Images for projects
+function openLightbox(img) {
+  const lightbox = document.getElementById("imageLightbox");
+  const lightboxImg = document.getElementById("lightboxImage");
+
+  lightboxImg.src = img.src;
+  lightbox.classList.add("active");
+}
+
+function closeLightbox() {
+  document.getElementById("imageLightbox").classList.remove("active");
+}
