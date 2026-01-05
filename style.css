@@ -53,7 +53,7 @@ body {
 
 /* NAVBAR */
 .navbar {
-  position: sticky;
+  position: sticky; 
   top: 0;
   background: var(--bg);
   display: flex;
@@ -72,6 +72,11 @@ body {
   transition: color 0.25s ease;
 }
 
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
 .nav-links a {
   margin-left: 2rem;
   text-decoration: none;
@@ -86,6 +91,15 @@ body {
 /* Light mode hover */
 .nav-links a:hover {
   background-color: rgba(0, 0, 0, 0.06);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--text);
 }
 
 /* Dark mode hover */
@@ -123,14 +137,20 @@ body.dark .resume-link:hover {
 
 /* HERO */
 .hero {
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  padding: 4rem;
+  padding: 4rem 1.5rem;
   background-color: var(--bg);
-  margin-left: 20rem;
-  margin-top: -5rem;
+}
+
+.hero-content {
+  max-width: 700px;
+  width: 100%;
+  text-align: left;
 }
 
 .hero h1 {
@@ -618,33 +638,10 @@ body.dark .contact-button:hover {
 
 
 /* MOBILE */
-@media (max-width: 480px) {
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-  }
-
-  .nav-links a {
-    margin-left: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    padding: 1rem 1.5rem;
-  }
-
-  .nav-links a {
-    margin-left: 0.8rem;
-    font-size: 0.9rem;
-  }
-
-  .nav-name {
-    font-size: 1.05rem;
-  }
-
+@media (max-width: 900px) {
   .hero {
+    margin-left: 0;
+    margin-top: 0;
     height: auto;
     min-height: 90vh;
     padding: 2.5rem 1.5rem;
@@ -660,12 +657,57 @@ body.dark .contact-button:hover {
 
   .hero-sub {
     font-size: 0.95rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1rem;
+    display: none;
+    flex-direction: column;
+    gap: 0.75rem;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    min-width: 180px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a,
+  .nav-links button {
+    margin: 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .resume-link {
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
   }
 
   .scroll-indicator {
-    right: 50%;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
     bottom: 1.8rem;
-    transform: translateX(50%);
     font-size: 0.75rem;
   }
 
