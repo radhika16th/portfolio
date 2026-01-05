@@ -149,8 +149,9 @@ body.dark .resume-link:hover {
 /* Scroll button */
 .scroll-indicator {
   position: absolute;
-  right: 3rem;
+  left: 50%;
   bottom: 3rem;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -160,7 +161,6 @@ body.dark .resume-link:hover {
   cursor: pointer;
   color: var(--muted);
   transition: color 0.25s ease;
-  mix-blend-mode: normal;
 }
 
 .scroll-indicator svg {
