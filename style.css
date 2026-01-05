@@ -249,10 +249,34 @@ body.dark .card:hover {
 }
 
 /* Trigger underline */
-.card:hover h3::after,
-.modal-content a:hover::after {
+.card:hover h3::after {
   transform: scaleX(1);
 }
+
+/* Project links */
+.project-links {
+  margin-top: 1.75rem;
+  display: flex;
+  gap: 1.25rem;
+}
+
+.project-link {
+  color: var(--muted);
+  display: inline-flex;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.project-link svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.project-link:hover {
+  color: var(--text);
+  transform: translateY(-2px);
+}
+
 
 /* MODAL BACKGROUND */
 .modal {
