@@ -9,6 +9,10 @@
   --skeleton-2: #e6e6e6;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body.dark {
   --bg: #0F0F0F;
   --surface: #1A1A1A;
@@ -189,6 +193,7 @@ body.dark .resume-link:hover {
   padding: 4rem;
   max-width: 900px;
   margin: 0 auto;
+  scroll-margin-top: 4rem;
 }
 
 .section h2 {
