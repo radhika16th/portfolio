@@ -102,3 +102,65 @@ function openLightbox(img) {
 function closeLightbox() {
   document.getElementById("imageLightbox").classList.remove("active");
 }
+
+// Awards
+const track = document.getElementById("awardsTrack");
+
+let offset = 0;
+let paused = false;
+let rafId;
+
+const SPEED = 0.4;
+const CARD_WIDTH = 260 + 24;
+const PAUSE_TIME = 3000;
+
+// clone cards once
+function setupInfiniteAwards() {
+  const cards = [...track.children];
+  cards.forEach(card => track.appendChild(card.cloneNode(true)));
+}
+
+function normalizeOffset() {
+  const half = track.scrollWidth / 2;
+
+  if (offset <= -half) {
+    offset += half;
+  } else if (offset >= 0) {
+    offset -= half;
+  }
+}
+
+// animation loop
+function animate() {
+  if (!paused) {
+    offset -= SPEED;
+
+    const half = track.scrollWidth / 2;
+    normalizeOffset();
+    track.style.transform = `translateX(${offset}px)`;
+  }
+
+  rafId = requestAnimationFrame(animate);
+}
+
+// arrow controls
+function scrollAwards(direction) {
+  paused = true;
+
+  offset -= direction * CARD_WIDTH;
+  normalizeOffset();
+  track.style.transform = `translateX(${offset}px)`;
+
+  clearTimeout(track.resumeTimer);
+  track.resumeTimer = setTimeout(() => {
+    paused = false;
+  }, PAUSE_TIME);
+}
+
+track.addEventListener("mouseenter", () => paused = true);
+track.addEventListener("mouseleave", () => paused = false);
+
+window.addEventListener("load", () => {
+  setupInfiniteAwards();
+  animate();
+});
