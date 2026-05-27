@@ -221,6 +221,46 @@ body.dark .resume-link:hover {
   font-size: 1.8rem;
 }
 
+/* SKILLS */
+.skill-pill {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.5rem 1.6rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  transition:
+    transform 0.2s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.skill-pill:hover {
+  transform: translateY(-2px);
+  background: rgba(0,0,0,0.04);
+}
+
+body.dark .skill-pill:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(237, 218, 218, 0.365);
+}
+
+.skills-group {
+  margin-bottom: 3rem;
+}
+
+.skills-group h3 {
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
+  font-size: 1.2rem;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
 /* PROJECTS */
 .projects {
   display: grid;
