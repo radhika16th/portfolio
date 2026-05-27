@@ -177,3 +177,19 @@ function copyEmail(button) {
     text.textContent = "✉ radhika16th@gmail.com";
   }, 2000);
 }
+
+// time
+function updateFooterTime() {
+  const now = new Date();
+
+  const hours = now.getHours() % 12 || 12;
+  const minutes = now.getMinutes().toString().padStart(2, '0');
+  const ampm = now.getHours() >= 12 ? 'PM' : 'AM';
+
+  document.getElementById("footer-time").innerHTML =
+    `${hours}<span class="clock-colon">:</span>${minutes} ${ampm}`;
+}
+
+updateFooterTime();
+
+setInterval(updateFooterTime, 1000);

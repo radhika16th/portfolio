@@ -892,6 +892,33 @@ a,
   font-weight: 500;
 }
 
+.footer a {
+  color: var(--text);
+  text-decoration: none;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.footer a:hover {
+  opacity: 0.65;
+  transform: translateY(-2px);
+}
+
+.clock-colon {
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
 
 /* MOBILE */
 @media (max-width: 900px) {
@@ -1009,5 +1036,11 @@ a,
   .side-socials,
   .side-email {
     display: none;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.2rem;
   }
 }
