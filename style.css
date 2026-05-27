@@ -850,24 +850,34 @@ a,
   line-height: 1.7;
 }
 
-.contact-button {
-  display: inline-block;
-  padding: 0.75rem 1.6rem;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  text-decoration: none;
-  font-size: 0.95rem;
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center; 
+}
+
+.contact-links a,
+.copy-email {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: 1rem;
   color: var(--text);
-  transition: background-color 0.25s ease, transform 0.25s ease;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
 }
 
-.contact-button:hover {
-  background-color: rgba(0, 0, 0, 0.06);
-  transform: translateY(-2px);
-}
-
-body.dark .contact-button:hover {
-  background-color: rgba(255, 255, 255, 0.12);
+.contact-links a:hover,
+.copy-email:hover {
+  opacity: 0.65;
+  transform: translateY(-1px);
 }
 
 .footer {

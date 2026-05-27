@@ -164,3 +164,16 @@ window.addEventListener("load", () => {
   setupInfiniteAwards();
   animate();
 });
+
+// contact email copy
+function copyEmail(button) {
+  navigator.clipboard.writeText("radhika16th@gmail.com");
+
+  const text = button.querySelector(".copy-text");
+
+  text.textContent = "✓ Copied!";
+
+  setTimeout(() => {
+    text.textContent = "✉ radhika16th@gmail.com";
+  }, 2000);
+}
